@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Info</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body class="bg-light">
+    <header class="text-center">
+      <h1>{{team.name}}</h1>
+      <p><a href="/success">Dashboard</a></p>
+    </header>
+
+    <main>
+      <table class="table table-bordered table-striped">
+        <tr>
+          <td>Team name:</td>
+          <td>{{team.name}}</td>
+        </tr>
+        <tr>
+          <td>Skill Level:</td>
+          <td>{{team.skill}}</td>
+        </tr>
+        <tr>
+          <td>Game Day:</td>
+          <td>{{team.day}}</td>
+        </tr>
+      </table>
+      <div class="d-flex justify-content-center">
+        <a href="/teams/{{team.id}}/edit" class="m-3">edit</a>
+        <a href="/teams/{{team.id}}/delete" class="m-3">Delete</a>
+      </div>
+    </main>
+  </body>
+</html>
